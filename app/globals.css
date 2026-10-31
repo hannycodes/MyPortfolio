@@ -101,6 +101,14 @@
   --input: #f2ddd8;
   --ring: #f2a0b5;
   --page-glow: rgba(251, 182, 200, 0.35);
+  --site-pattern: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='192'%20height='192'%20viewBox='0%200%20192%20192'%3E%3Crect%20x='28'%20y='28'%20width='36'%20height='36'%20rx='13'%20fill='%23d45173'%20fill-opacity='0.028'/%3E%3Crect%20x='128'%20y='128'%20width='22'%20height='22'%20rx='8'%20fill='%23d45173'%20fill-opacity='0.018'/%3E%3C/svg%3E");
+
+  --wave-fill-1: rgba(255, 211, 222, 0.85);
+  --wave-fill-2: rgba(250, 240, 230, 0.72);
+  --wave-fill-3: rgba(255, 237, 224, 0.55);
+  --wave-line-1: rgba(244, 145, 170, 0);
+  --wave-line-2: rgba(234, 110, 142, 0.65);
+  --wave-line-3: rgba(212, 81, 115, 0);
 
   --elevation-soft: 0 1px 2px rgba(120, 70, 80, 0.04),
     0 4px 12px -2px rgba(120, 70, 80, 0.08),
@@ -132,6 +140,14 @@
   --input: #3d2e32;
   --ring: #e6a0b0;
   --page-glow: rgba(230, 160, 176, 0.12);
+  --site-pattern: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='192'%20height='192'%20viewBox='0%200%20192%20192'%3E%3Crect%20x='28'%20y='28'%20width='36'%20height='36'%20rx='13'%20fill='%23fbb6c8'%20fill-opacity='0.04'/%3E%3Crect%20x='128'%20y='128'%20width='22'%20height='22'%20rx='8'%20fill='%23fbb6c8'%20fill-opacity='0.025'/%3E%3C/svg%3E");
+
+  --wave-fill-1: rgba(234, 110, 142, 0.22);
+  --wave-fill-2: rgba(230, 160, 176, 0.16);
+  --wave-fill-3: rgba(201, 95, 85, 0.12);
+  --wave-line-1: rgba(251, 182, 200, 0);
+  --wave-line-2: rgba(251, 182, 200, 0.45);
+  --wave-line-3: rgba(251, 182, 200, 0);
 
   --elevation-soft: 0 1px 2px rgba(0, 0, 0, 0.3),
     0 4px 12px -2px rgba(0, 0, 0, 0.35),
@@ -190,13 +206,17 @@
   body {
     min-height: 100%;
     background-color: var(--color-background);
-    background-image: radial-gradient(
-      1200px 600px at 50% -10%,
-      var(--page-glow),
-      transparent 70%
-    );
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-image:
+      var(--site-pattern),
+      radial-gradient(
+        1200px 600px at 50% -10%,
+        var(--page-glow),
+        transparent 70%
+      );
+    background-repeat: repeat, no-repeat;
+    background-position: center top, 0 0;
+    background-size: 192px 192px, auto;
+    background-attachment: fixed, fixed;
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
@@ -241,43 +261,4 @@
   }
 }
 
-/* Faint constellation of rounded squares for the hero background. */
-.hero-squares {
-  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='192'%20height='192'%20viewBox='0%200%20192%20192'%3E%3Crect%20x='28'%20y='28'%20width='36'%20height='36'%20rx='13'%20fill='%23d45173'%20fill-opacity='0.028'/%3E%3Crect%20x='128'%20y='128'%20width='22'%20height='22'%20rx='8'%20fill='%23d45173'%20fill-opacity='0.018'/%3E%3C/svg%3E");
-  background-position: center top;
-  background-size: 192px 192px;
-  -webkit-mask-image: radial-gradient(
-    ellipse at 50% 35%,
-    black 12%,
-    transparent 68%
-  );
-  mask-image: radial-gradient(ellipse at 50% 35%, black 12%, transparent 68%);
-}
 
-.dark .hero-squares {
-  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='192'%20height='192'%20viewBox='0%200%20192%20192'%3E%3Crect%20x='28'%20y='28'%20width='36'%20height='36'%20rx='13'%20fill='%23fbb6c8'%20fill-opacity='0.04'/%3E%3Crect%20x='128'%20y='128'%20width='22'%20height='22'%20rx='8'%20fill='%23fbb6c8'%20fill-opacity='0.025'/%3E%3C/svg%3E");
-}
-
-/* Organic, softly asymmetric frame for the hero portrait. */
-.photo-blob {
-  border-radius: 58% 42% 46% 54% / 40% 36% 64% 60%;
-}
-
-/* Layered depth for the floating portrait frame. */
-.photo-depth {
-  box-shadow:
-    inset 0 -28px 48px -32px rgba(180, 120, 130, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.7),
-    0 2px 4px rgba(120, 70, 80, 0.04),
-    0 18px 40px -12px rgba(180, 120, 130, 0.22),
-    0 42px 90px -32px rgba(180, 120, 130, 0.3);
-}
-
-.dark .photo-depth {
-  box-shadow:
-    inset 0 -28px 48px -32px rgba(0, 0, 0, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06),
-    0 2px 4px rgba(0, 0, 0, 0.3),
-    0 18px 40px -12px rgba(0, 0, 0, 0.4),
-    0 42px 90px -32px rgba(0, 0, 0, 0.5);
-}

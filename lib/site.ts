@@ -6,14 +6,14 @@ export const siteConfig = {
     "The personal portfolio of Hanan Seid Mohammed — a soft, minimal space for projects, skills, and contact.",
   url: "https://github.com/hannycodes/MyPortfolio",
   email: "hananseidmohammedh@gmail.com",
+  phone: "+251904665110",
   socials: {
     github: "https://github.com/hannycodes",
-    // Update this with your exact LinkedIn profile URL.
-    linkedin: "https://www.linkedin.com/in/hanan-seid-mohammed",
-    // Placeholder handles — swap these for your real Telegram and Instagram.
-    telegram: "https://t.me/hannycodes",
-    instagram: "https://www.instagram.com/hannycodes/",
+    linkedin: "https://www.linkedin.com/in/hanan-seid-",
+    telegram: "https://t.me/just_hanny/",
+    instagram: "https://www.instagram.com/h_a_n_n_y_1/",
     email: "mailto:hananseidmohammedh@gmail.com",
+    phone: "tel:+251904665110",
   },
   nav: [
     { label: "About", href: "#about" },
