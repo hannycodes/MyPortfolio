@@ -1,5 +1,6 @@
 export const siteConfig = {
   name: "Hanan Seid Mohammed",
+  navName: "Hanan Seid M.",
   shortName: "Hanan",
   description:
     "The personal portfolio of Hanan Seid Mohammed — a soft, minimal space for projects, skills, and contact.",

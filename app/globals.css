@@ -241,26 +241,43 @@
   }
 }
 
-/* Very soft, gently faded dot texture for the hero. */
-.hero-dots {
-  background-image: radial-gradient(
-    circle at 1px 1px,
-    rgba(212, 81, 115, 0.18) 1px,
-    transparent 0
-  );
-  background-size: 22px 22px;
+/* Faint constellation of rounded squares for the hero background. */
+.hero-squares {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='192'%20height='192'%20viewBox='0%200%20192%20192'%3E%3Crect%20x='28'%20y='28'%20width='36'%20height='36'%20rx='13'%20fill='%23d45173'%20fill-opacity='0.028'/%3E%3Crect%20x='128'%20y='128'%20width='22'%20height='22'%20rx='8'%20fill='%23d45173'%20fill-opacity='0.018'/%3E%3C/svg%3E");
+  background-position: center top;
+  background-size: 192px 192px;
   -webkit-mask-image: radial-gradient(
-    ellipse at 50% 40%,
-    black 25%,
-    transparent 75%
+    ellipse at 50% 35%,
+    black 12%,
+    transparent 68%
   );
-  mask-image: radial-gradient(ellipse at 50% 40%, black 25%, transparent 75%);
+  mask-image: radial-gradient(ellipse at 50% 35%, black 12%, transparent 68%);
 }
 
-.dark .hero-dots {
-  background-image: radial-gradient(
-    circle at 1px 1px,
-    rgba(251, 182, 200, 0.16) 1px,
-    transparent 0
-  );
+.dark .hero-squares {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='192'%20height='192'%20viewBox='0%200%20192%20192'%3E%3Crect%20x='28'%20y='28'%20width='36'%20height='36'%20rx='13'%20fill='%23fbb6c8'%20fill-opacity='0.04'/%3E%3Crect%20x='128'%20y='128'%20width='22'%20height='22'%20rx='8'%20fill='%23fbb6c8'%20fill-opacity='0.025'/%3E%3C/svg%3E");
+}
+
+/* Organic, softly asymmetric frame for the hero portrait. */
+.photo-blob {
+  border-radius: 58% 42% 46% 54% / 40% 36% 64% 60%;
+}
+
+/* Layered depth for the floating portrait frame. */
+.photo-depth {
+  box-shadow:
+    inset 0 -28px 48px -32px rgba(180, 120, 130, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 2px 4px rgba(120, 70, 80, 0.04),
+    0 18px 40px -12px rgba(180, 120, 130, 0.22),
+    0 42px 90px -32px rgba(180, 120, 130, 0.3);
+}
+
+.dark .photo-depth {
+  box-shadow:
+    inset 0 -28px 48px -32px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 18px 40px -12px rgba(0, 0, 0, 0.4),
+    0 42px 90px -32px rgba(0, 0, 0, 0.5);
 }

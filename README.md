@@ -133,7 +133,7 @@ Soft, rounded corners are the default across the system:
 
 ## Layout
 
-- **Hero** — soft, animated introduction with a portrait placeholder, a gentle dot texture, and staggered Framer Motion entrances.
+- **Hero** — soft, animated introduction with an organic portrait frame, a faint rounded-square geometry texture, and staggered Framer Motion entrances.
 - **Navbar** — sticky and blurred, with the name, anchor navigation, a mobile menu, and the theme toggle.
 - **Footer** — soft copyright line plus GitHub, LinkedIn, Telegram, Instagram, and email links.
 
