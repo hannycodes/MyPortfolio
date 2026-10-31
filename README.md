@@ -36,16 +36,21 @@ Open [http://localhost:3000](http://localhost:3000) to view the app.
 
 ```
 app/
-  layout.tsx        # Root layout (fonts, metadata, theme provider)
-  page.tsx          # Design system preview
+  layout.tsx        # Root layout (navbar, footer, fonts, theme provider)
+  page.tsx          # Home page + design system preview
   globals.css       # Tailwind entry + design tokens
 components/
+  icons/
+    social-icons.tsx
+  layout/
+    navbar.tsx
+    footer.tsx
   providers/
     theme-provider.tsx
   ui/
     theme-toggle.tsx
 lib/
-  site.ts           # Shared site metadata
+  site.ts           # Site metadata, nav, and social links
 public/             # Static assets
 ```
 
@@ -125,6 +130,14 @@ Soft, rounded corners are the default across the system:
   </button>
 </div>
 ```
+
+## Layout
+
+- **Navbar** — sticky and blurred, with the name, anchor navigation, a mobile menu, and the theme toggle.
+- **Footer** — soft copyright line plus GitHub, LinkedIn, and email links.
+
+Navigation links point to the `#about`, `#projects`, `#skills`, and `#contact`
+sections on the home page. Social URLs live in `lib/site.ts`.
 
 ## Theming
 

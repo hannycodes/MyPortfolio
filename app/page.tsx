@@ -1,6 +1,4 @@
 import { Heart, Sparkles } from "lucide-react";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
-import { siteConfig } from "@/lib/site";
 
 const palette = [
   { name: "Blush", className: "bg-blush-200" },
@@ -10,17 +8,33 @@ const palette = [
   { name: "Dusty rose", className: "bg-blush-500" },
 ];
 
+const sections = [
+  {
+    id: "about",
+    title: "About",
+    copy: "A little space for the story behind the work — coming soon.",
+  },
+  {
+    id: "projects",
+    title: "Projects",
+    copy: "Selected projects and experiments will live here.",
+  },
+  {
+    id: "skills",
+    title: "Skills",
+    copy: "Tools, technologies, and the things I love building with.",
+  },
+  {
+    id: "contact",
+    title: "Contact",
+    copy: "Have a project in mind? Let's make something soft and thoughtful.",
+  },
+];
+
 export default function Home() {
   return (
-    <main className="flex flex-1 flex-col px-6 py-6 sm:px-10">
-      <header className="mx-auto flex w-full max-w-5xl items-center justify-between">
-        <span className="font-display text-lg font-semibold tracking-tight">
-          {siteConfig.name}
-        </span>
-        <ThemeToggle />
-      </header>
-
-      <section className="mx-auto flex w-full max-w-5xl flex-1 flex-col items-center justify-center gap-10 py-16">
+    <main className="flex flex-1 flex-col px-6 py-10 sm:px-10">
+      <section className="mx-auto flex w-full max-w-5xl flex-col items-center gap-10 py-10 sm:py-16">
         <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-medium text-muted-foreground shadow-soft">
           <Sparkles className="h-3.5 w-3.5 text-primary" />
           Soft &amp; plushy design system
@@ -76,9 +90,22 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="mx-auto w-full max-w-5xl pb-4 text-center text-xs text-muted-foreground">
-        Built with Next.js, Tailwind CSS &amp; a lot of blush.
-      </footer>
+      <div className="mx-auto grid w-full max-w-5xl gap-6 pb-10 sm:grid-cols-2">
+        {sections.map((section) => (
+          <section
+            key={section.id}
+            id={section.id}
+            className="scroll-mt-28 rounded-3xl border border-border bg-card p-6 shadow-soft sm:p-8"
+          >
+            <h2 className="font-display text-2xl font-semibold">
+              {section.title}
+            </h2>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              {section.copy}
+            </p>
+          </section>
+        ))}
+      </div>
     </main>
   );
 }
