@@ -240,3 +240,27 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Very soft, gently faded dot texture for the hero. */
+.hero-dots {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(212, 81, 115, 0.18) 1px,
+    transparent 0
+  );
+  background-size: 22px 22px;
+  -webkit-mask-image: radial-gradient(
+    ellipse at 50% 40%,
+    black 25%,
+    transparent 75%
+  );
+  mask-image: radial-gradient(ellipse at 50% 40%, black 25%, transparent 75%);
+}
+
+.dark .hero-dots {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(251, 182, 200, 0.16) 1px,
+    transparent 0
+  );
+}

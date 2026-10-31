@@ -9,6 +9,9 @@ export const siteConfig = {
     github: "https://github.com/hannycodes",
     // Update this with your exact LinkedIn profile URL.
     linkedin: "https://www.linkedin.com/in/hanan-seid-mohammed",
+    // Placeholder handles — swap these for your real Telegram and Instagram.
+    telegram: "https://t.me/hannycodes",
+    instagram: "https://www.instagram.com/hannycodes/",
     email: "mailto:hananseidmohammedh@gmail.com",
   },
   nav: [

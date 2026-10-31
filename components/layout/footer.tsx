@@ -1,6 +1,11 @@
 import type { ComponentType } from "react";
 import { Mail } from "lucide-react";
-import { GitHubIcon, LinkedInIcon } from "@/components/icons/social-icons";
+import {
+  GitHubIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  TelegramIcon,
+} from "@/components/icons/social-icons";
 import { siteConfig } from "@/lib/site";
 
 type SocialIcon = ComponentType<{ className?: string }>;
@@ -8,6 +13,8 @@ type SocialIcon = ComponentType<{ className?: string }>;
 const socials: Array<{ label: string; href: string; icon: SocialIcon }> = [
   { label: "GitHub", href: siteConfig.socials.github, icon: GitHubIcon },
   { label: "LinkedIn", href: siteConfig.socials.linkedin, icon: LinkedInIcon },
+  { label: "Telegram", href: siteConfig.socials.telegram, icon: TelegramIcon },
+  { label: "Instagram", href: siteConfig.socials.instagram, icon: InstagramIcon },
   { label: "Email", href: siteConfig.socials.email, icon: Mail },
 ];
 

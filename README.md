@@ -133,11 +133,13 @@ Soft, rounded corners are the default across the system:
 
 ## Layout
 
+- **Hero** — soft, animated introduction with a portrait placeholder, a gentle dot texture, and staggered Framer Motion entrances.
 - **Navbar** — sticky and blurred, with the name, anchor navigation, a mobile menu, and the theme toggle.
-- **Footer** — soft copyright line plus GitHub, LinkedIn, and email links.
+- **Footer** — soft copyright line plus GitHub, LinkedIn, Telegram, Instagram, and email links.
 
 Navigation links point to the `#about`, `#projects`, `#skills`, and `#contact`
-sections on the home page. Social URLs live in `lib/site.ts`.
+sections on the home page. Social URLs live in `lib/site.ts` — swap the
+placeholder Telegram and Instagram handles there when you're ready.
 
 ## Theming
 
