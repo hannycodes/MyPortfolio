@@ -8,7 +8,6 @@ import {
   Copy,
   Check,
   Send,
-  ExternalLink,
 } from "lucide-react";
 import {
   GitHubIcon,
@@ -268,7 +267,6 @@ export function ContactSection() {
                     >
                       <Icon className="h-4 w-4 fill-current text-muted-foreground group-hover:text-blush-600 dark:group-hover:text-blush-300 transition-colors" />
                       <span>{social.name}</span>
-                      <ExternalLink className="h-3 w-3 opacity-40 group-hover:opacity-100 transition-opacity" />
                     </a>
                   );
                 })}

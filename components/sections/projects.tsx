@@ -2,9 +2,11 @@
 
 import Image, { type StaticImageData } from "next/image";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import { ExternalLink, ImageIcon } from "lucide-react";
+import { ImageIcon } from "lucide-react";
 import { GitHubIcon } from "@/components/icons/social-icons";
 import legashImg from "@/images/legash.png";
+import hun from "@/images/hun.jpg";
+import goodhands from "@/images/goodhands.jpg";
 
 const softEase = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
@@ -25,35 +27,46 @@ export const defaultProjects: ProjectItem[] = [
   {
     id: "Legash",
     title: "Legash",
-    tagline: "Website",
+    tagline: "Leader, lead frontend developer",
     description:
-      "Lead developer of a responsive , full stack website for a smart blood donation system that also have a mobile application for donors.",
+      "A responsive  full stack website for a smart blood donation system that also have a mobile application for donors.",
     tags: ["React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"],
     githubUrl: "https://github.com/Legash-Team/Frontend",
     liveUrl: "https://legash-ob55.onrender.com/",
     image: legashImg,
   },
   {
-    id: "project-2",
-    title: "Project Two",
-    tagline: "Creative & Functional Tool",
+    id: "HUN.",
+    title: "HUN",
+    tagline: "The project manager & full stack developer",
     description:
-      "Designed with a thoughtful aesthetic and intuitive user flow. Focused on problem solving with delight and ease of use.",
+      "Designed my dream cafe management system for a cafe that i dream of owning. ",
     tags: ["React", "Node.js", "PostgreSQL"],
-    githubUrl: "https://github.com/hannycodes",
-    liveUrl: "https://example.com",
-    image: undefined,
+    githubUrl: "https://github.com/hannycodes/hun",
+    liveUrl: "https://hun-cafe.vercel.app/",
+    image: hun,
   },
   {
-    id: "project-3",
-    title: "Project Three",
-    tagline: "AI-Powered Experience",
+    id: "Good Hands",
+    title: "Good Hands",
+    tagline: "Team leader & full stack developer",
     description:
-      "Explores modern machine learning integrations with an accessible frontend interface and real-time interactive feedback.",
-    tags: ["Python", "FastAPI", "Next.js"],
-    githubUrl: "https://github.com/hannycodes",
+      "Designed a full stack website for a charity system called Good Hands for our team project",
+    tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    githubUrl: "https://github.com/hannycodes/Good_Hands",
     liveUrl: "https://example.com",
-    image: undefined,
+    image: goodhands,
+  },
+   {
+    id: "Legash",
+    title: "Legash",
+    tagline: "Leader, lead frontend developer",
+    description:
+      "A responsive  full stack website for a smart blood donation system that also have a mobile application for donors.",
+    tags: ["React","Vite", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"],
+    githubUrl: "https://github.com/Legash-Team/Frontend",
+    liveUrl: "https://legash-ob55.onrender.com/",
+    image: legashImg,
   },
 ];
 
@@ -198,7 +211,6 @@ export function ProjectsSection({
                             aria-label={`${project.title} Live demo`}
                           >
                             <span>Live Demo</span>
-                            <ExternalLink className="h-3 w-3" />
                           </a>
                         )}
                       </div>

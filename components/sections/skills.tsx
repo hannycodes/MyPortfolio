@@ -6,7 +6,6 @@ import {
   Server,
   Layers,
   Wrench,
-  Sparkles,
   Database,
   Cpu,
   Palette,
@@ -53,7 +52,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     title: "AI Tools",
-    description: "Using AI for building project documentation and integration with modern developer tools.",
+    description: "Using AI to build project documentation and implementing with modern developer tools.",
     icon: Cpu,
     skills: [
       { name: "Claude AI" },
