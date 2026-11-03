@@ -9,7 +9,7 @@ export const siteConfig = {
   phone: "+251904665110",
   socials: {
     github: "https://github.com/hannycodes",
-    linkedin: "https://www.linkedin.com/in/hanan-seid-",
+    linkedin: "https://www.linkedin.com/in/hanan-seid-7600b6346/",
     telegram: "https://t.me/just_hanny/",
     instagram: "https://www.instagram.com/h_a_n_n_y_1/",
     email: "mailto:hananseidmohammedh@gmail.com",

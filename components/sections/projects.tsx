@@ -7,6 +7,7 @@ import { GitHubIcon } from "@/components/icons/social-icons";
 import legashImg from "@/images/legash.png";
 import hun from "@/images/hun.jpg";
 import goodhands from "@/images/goodhands.jpg";
+import sisterhood from "@/images/sisterhood.png";
 
 const softEase = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
@@ -30,7 +31,7 @@ export const defaultProjects: ProjectItem[] = [
     tagline: "Leader, lead frontend developer",
     description:
       "A responsive  full stack website for a smart blood donation system that also have a mobile application for donors.",
-    tags: ["React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"],
+    tags: ["React","Vite", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"],
     githubUrl: "https://github.com/Legash-Team/Frontend",
     liveUrl: "https://legash-ob55.onrender.com/",
     image: legashImg,
@@ -42,7 +43,7 @@ export const defaultProjects: ProjectItem[] = [
     description:
       "Designed my dream cafe management system for a cafe that i dream of owning. ",
     tags: ["React", "Node.js", "PostgreSQL"],
-    githubUrl: "https://github.com/hannycodes/hun",
+    githubUrl: "https://github.com/hannycodes/hun/",
     liveUrl: "https://hun-cafe.vercel.app/",
     image: hun,
   },
@@ -51,22 +52,21 @@ export const defaultProjects: ProjectItem[] = [
     title: "Good Hands",
     tagline: "Team leader & full stack developer",
     description:
-      "Designed a full stack website for a charity system called Good Hands for our team project",
+      "Designed a full stack website for a charity system called Good Hands for our team project. (A school project)",
     tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     githubUrl: "https://github.com/hannycodes/Good_Hands",
-    liveUrl: "https://example.com",
     image: goodhands,
   },
    {
-    id: "Legash",
-    title: "Legash",
+    id: "Sisterhood Connect",
+    title: "Sisterhood Connect",
     tagline: "Leader, lead frontend developer",
     description:
-      "A responsive  full stack website for a smart blood donation system that also have a mobile application for donors.",
-    tags: ["React","Vite", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"],
-    githubUrl: "https://github.com/Legash-Team/Frontend",
-    liveUrl: "https://legash-ob55.onrender.com/",
-    image: legashImg,
+      "A responsive  full stack website for females where they can connect form all around Ethiopia and mentor eachother. (An old project)",
+    tags: ["React","Vite", "TypeScript", "Tailwind CSS"],
+    githubUrl: "https://github.com/hannycodes/Sisterhood-connect",
+    liveUrl: "https://sisterhood-connect.vercel.app/",
+    image: sisterhood,
   },
 ];
 
@@ -118,17 +118,14 @@ export function ProjectsSection({
          
           <div className="grid gap-8 sm:grid-cols-2">
             {projects.map((project, index) => {
-              const isThirdCard = index === 2;
+
 
               return (
                 <motion.article
                   key={project.id}
                   variants={cardVariants}
-                  className={`group relative flex flex-col overflow-hidden rounded-3xl border border-border/80 bg-card/80 shadow-soft backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blush-300/80 hover:bg-card hover:shadow-plush dark:hover:border-blush-500/40 ${
-                    isThirdCard
-                      ? "sm:col-span-2 sm:mx-auto sm:w-full sm:max-w-xl"
-                      : ""
-                  }`}
+                  className={`group relative flex flex-col overflow-hidden rounded-3xl border border-border/80 bg-card/80 shadow-soft backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blush-300/80 hover:bg-card hover:shadow-plush dark:hover:border-blush-500/40 
+                    `}
                 >
                   {/* Project Image Container */}
                   <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-border/70 bg-gradient-to-br from-blush-50/70 via-cream-100/50 to-peach-50/60 dark:from-blush-950/20 dark:via-card dark:to-peach-950/20">
